@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE tiles-definitions PUBLIC
+  "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN" 
+  "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+<tiles-definitions>
+    <definition name="Page" template="/WEB-INF/jsp/template/Template.jsp">
+        <put-attribute name="title" value="Page" />
+        <put-attribute name="header" value="/WEB-INF/jsp/page/header.jsp" />
+        <put-attribute name="footer" value="/WEB-INF/jsp/page/footer.jsp" />
+    </definition>
+    <definition name="Home" extends="Page">
+        <put-attribute name="title" value="Page Home" />
+        <put-attribute name="content" value="/WEB-INF/jsp/page/home.jsp"/>
+    </definition>
+    <definition name="Products" extends="Page">
+        <put-attribute name="title" value="Page Products" />
+        <put-attribute name="content" value="/WEB-INF/jsp/page/products.jsp"/>
+    </definition>
+    <definition name="Single" extends="Page">
+        <put-attribute name="title" value="Page Single" />
+        <put-attribute name="content" value="/WEB-INF/jsp/page/single.jsp"/>
+    </definition>
+    
+    <definition name="Login" extends="Page">
+        <put-attribute name="title" value="Page Login" />
+        <put-attribute name="content" value="/WEB-INF/jsp/page/login.jsp"/>
+    </definition>
+    
+    <definition name="Registration" extends="Page">
+        <put-attribute name="title" value="Page Registration" />
+        <put-attribute name="content" value="/WEB-INF/jsp/page/registration.jsp"/>
+    </definition>
+    
+    <definition name="Accinfor" extends="Page">
+        <put-attribute name="title" value="Page Accinfor" />
+        <put-attribute name="content" value="/WEB-INF/jsp/page/accinfor.jsp"/>
+    </definition>
+    
+    <definition name="About" extends="Page">
+        <put-attribute name="title" value="Page About" />
+        <put-attribute name="content" value="/WEB-INF/jsp/page/about.jsp"/>
+    </definition>
+    
+    <definition name="Error" extends="Page">
+        <put-attribute name="title" value="Page Error" />
+        <put-attribute name="content" value="/WEB-INF/jsp/page/error.jsp"/>
+    </definition>
+    
+    <definition name="History" extends="Page">
+        <put-attribute name="title" value="Page History" />
+        <put-attribute name="content" value="/WEB-INF/jsp/page/history.jsp"/>
+    </definition>
+    <definition name="Cart" extends="Page">
+        <put-attribute name="title" value="Page Cart" />
+        <put-attribute name="content" value="/WEB-INF/jsp/page/cart.jsp"/>
+    </definition>
+    <definition name="Bill" extends="Page">
+        <put-attribute name="title" value="Bill" />
+        <put-attribute name="content" value="/WEB-INF/jsp/page/bills.jsp"/>
+    </definition>
+    
+</tiles-definitions>
+
