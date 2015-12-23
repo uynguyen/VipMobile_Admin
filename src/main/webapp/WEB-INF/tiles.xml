@@ -15,7 +15,7 @@ and open the template in the editor.
     </definition>
     <definition name="Home" extends="Page">
         <put-attribute name="title" value="Page Home" />
-        <put-attribute name="content" value="/WEB-INF/jsp/page/home.jsp"/>
+        <!--<put-attribute name="content" value="/WEB-INF/jsp/page/home.jsp"/>-->
     </definition>
     <definition name="Products" extends="Page">
         <put-attribute name="title" value="Page Products" />
