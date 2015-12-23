@@ -1,153 +1,112 @@
+<%-- 
+    Document   : master
+    Created on : Oct 9, 2015, 7:22:08 PM
+    Author     : LeeSan
+--%>
+
+
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<%@taglib prefix="tiles" uri="http://tiles.apache.org/tags-tiles"%>
+<%@taglib prefix="tiles" uri="http://tiles.apache.org/tags-tiles" %>
+
 <!DOCTYPE html>
 <html>
     <head>
-        <meta charset="utf-8">
-        <title>Free HTML5 Bootstrap Admin Template</title>
+        <title>Shopper an E-Commerce online Shopping Category Flat Bootstarp responsive Website Template| Man :: w3layouts</title>   
+        <link href='/java_he_thong_phan_tan_admin/css/bootstrap.css' rel='stylesheet' type='text/css' />   
+        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->   
+        <script src='/java_he_thong_phan_tan_admin/js/jquery.min.js'></script>   
+        <!-- Custom Theme files -->   
+        <link href='/java_he_thong_phan_tan_admin/css/hover.css' rel='stylesheet' media='all'>   
+        <link href='/java_he_thong_phan_tan_admin/css/style.css' rel='stylesheet' type='text/css' media='all' />   
+        <!-- Custom Theme files -->   
+        <meta name='viewport' content='width=device-width, initial-scale=1'>   
+        <meta http-equiv='Content-Type' content='text/html; charset=utf-8' />   
+
+        <script type='application/x-javascript'> addEventListener('load', function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>   
+        <!--webfont-->   
+        <link href='http: fonts.googleapis.com/css?family=Lato:100,300,400,700,900' rel='stylesheet' type='text/css'>   
+        <script src='http: ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js'></script>   
+
+        <title>Shopper an E-Commerce online Shopping Category Flat Bootstarp responsive Website Template| Home :: w3layouts</title>
+        <link href="/java_he_thong_phan_tan_admin/css/bootstrap.css" rel='stylesheet' type='text/css' />
+        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+        <script src="/java_he_thong_phan_tan_admin/js/jquery.min.js"></script>
+        <!-- Custom Theme files -->
+        <link href="/java_he_thong_phan_tan_admin/css/hover.css" rel="stylesheet" media="all">
+        <link href="/java_he_thong_phan_tan_admin/css/style.css" rel="stylesheet" type="text/css" media="all" />
+        <!-- Custom Theme files -->
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="description" content="Charisma, a fully featured, responsive, HTML5, Bootstrap admin template.">
-        <meta name="author" content="Muhammad Usman">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="keywords" content="Shopper Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template, 
+              Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
+        <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+        <!--webfont-->
+        <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900' rel='stylesheet' type='text/css'>
+        <!---- tabs---->
+        <link type="text/css" rel="stylesheet" href="/java_he_thong_phan_tan_admin/css/easy-responsive-tabs.css" />
+        <script src="/java_he_thong_phan_tan_admin/js/easyResponsiveTabs.js" type="text/javascript"></script>
+        <script type="text/javascript">
+            $(document).ready(function () {
+                $('#horizontalTab').easyResponsiveTabs({
+                    type: 'default', //Types: default, vertical, accordion           
+                    width: 'auto', //auto or any width like 600px
+                    fit: true, // 100% fit in a container
+                    closed: 'accordion', // Start closed if in accordion view
+                    activate: function (event) { // Callback function if tab is switched
+                        var $tab = $(this);
+                        var $info = $('#tabInfo');
+                        var $name = $('span', $info);
+                        $name.text($tab.text());
+                        $info.show();
+                    }
+                });
 
-        <!-- The styles -->
-        <link id="bs-css" href="${pageContext.request.contextPath}/css/bootstrap-cerulean.min.css" rel="stylesheet">
+                $('#verticalTab').easyResponsiveTabs({
+                    type: 'vertical',
+                    width: 'auto',
+                    fit: true
+                });
+            });
+        </script>
 
-        <link href="${pageContext.request.contextPath}/css/charisma-app.css" rel="stylesheet">
-        <link href='${pageContext.request.contextPath}/bower_components/fullcalendar/dist/fullcalendar.css' rel='stylesheet'>
-        <link href='${pageContext.request.contextPath}/bower_components/fullcalendar/dist/fullcalendar.print.css' rel='stylesheet' media='print'>
-        <link href='${pageContext.request.contextPath}/bower_components/chosen/chosen.min.css' rel='stylesheet'>
-        <link href='${pageContext.request.contextPath}/bower_components/colorbox/example3/colorbox.css' rel='stylesheet'>
-        <link href='${pageContext.request.contextPath}/bower_components/responsive-tables/responsive-tables.css' rel='stylesheet'>
-        <link href='${pageContext.request.contextPath}/bower_components/bootstrap-tour/build/css/bootstrap-tour.min.css' rel='stylesheet'>
-        <link href='${pageContext.request.contextPath}/css/jquery.noty.css' rel='stylesheet'>
-        <link href='${pageContext.request.contextPath}/css/noty_theme_default.css' rel='stylesheet'>
-        <link href='${pageContext.request.contextPath}/css/elfinder.min.css' rel='stylesheet'>
-        <link href='${pageContext.request.contextPath}/css/elfinder.theme.css' rel='stylesheet'>
-        <link href='${pageContext.request.contextPath}/css/jquery.iphone.toggle.css' rel='stylesheet'>
-        <link href='${pageContext.request.contextPath}/css/uploadify.css' rel='stylesheet'>
-        <link href='${pageContext.request.contextPath}/css/animate.min.css' rel='stylesheet'>
+        <script src="/java_he_thong_phan_tan_admin/js/responsiveslides.min.js"></script>
+        <script>
+            $(function () {
+                $("#slider").responsiveSlides({
+                    auto: true,
+                    speed: 500,
+                    manualControls: '#slider3-pager',
+                });
+            });
+        </script>
 
-        <!-- jQuery -->
-        <script src="${pageContext.request.contextPath}/resources/bower_components/jquery/jquery.min.js"></script>
+        <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+        <script src='/java_he_thong_phan_tan_admin/script/jquery-1.10.2.js'></script> 
+        <script src='/java_he_thong_phan_tan_admin/script/jquery-ui.js'></script> 
+        <script>
+            $(function () {
+                $('#datepicker').datepicker();
+            });
+        </script> 
 
-        <!-- The fav icon -->
-        <link rel="shortcut icon" href="${pageContext.request.contextPath}/img/favicon.ico">
-
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+        <style type="text/css">
+            .bs-example{
+                margin: 20px;
+            }
+            hr{
+                margin: 60px 0;
+            }
+        </style>
     </head>
+    <body>     
+        <tiles:insertAttribute name="header" />
 
-    <body>
-        ${pageContext.request.contextPath}/js/jquery.cookie.js
         <tiles:insertAttribute name="content" />
-        <!-- topbar starts -->
-        <div class="navbar navbar-default" role="navigation">
 
-            <div class="navbar-inner">
-                <button type="button" class="navbar-toggle pull-left animated flip">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="index.html"> <img alt="Charisma Logo" src="img/logo20.png" class="hidden-xs"/>
-                    <span>Charisma</span></a>
-
-                <!-- user dropdown starts -->
-                <div class="btn-group pull-right">
-                    <button class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-                        <i class="glyphicon glyphicon-user"></i><span class="hidden-sm hidden-xs"> admin</span>
-                        <span class="caret"></span>
-                    </button>
-                    <ul class="dropdown-menu">
-                        <li><a href="#">Profile</a></li>
-                        <li class="divider"></li>
-                        <li><a href="login.html">Logout</a></li>
-                    </ul>
-                </div>
-                <!-- user dropdown ends -->
-
-                <!-- theme selector starts -->
-                <div class="btn-group pull-right theme-container animated tada">
-                    <button class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-                        <i class="glyphicon glyphicon-tint"></i><span
-                            class="hidden-sm hidden-xs"> Change Theme / Skin</span>
-                        <span class="caret"></span>
-                    </button>
-                    <ul class="dropdown-menu" id="themes">
-                        <li><a data-value="classic" href="#"><i class="whitespace"></i> Classic</a></li>
-                        <li><a data-value="cerulean" href="#"><i class="whitespace"></i> Cerulean</a></li>
-                        <li><a data-value="cyborg" href="#"><i class="whitespace"></i> Cyborg</a></li>
-                        <li><a data-value="simplex" href="#"><i class="whitespace"></i> Simplex</a></li>
-                        <li><a data-value="darkly" href="#"><i class="whitespace"></i> Darkly</a></li>
-                        <li><a data-value="lumen" href="#"><i class="whitespace"></i> Lumen</a></li>
-                        <li><a data-value="slate" href="#"><i class="whitespace"></i> Slate</a></li>
-                        <li><a data-value="spacelab" href="#"><i class="whitespace"></i> Spacelab</a></li>
-                        <li><a data-value="united" href="#"><i class="whitespace"></i> United</a></li>
-                    </ul>
-                </div>
-                <!-- theme selector ends -->
-
-                <ul class="collapse navbar-collapse nav navbar-nav top-menu">
-                    <li><a href="#"><i class="glyphicon glyphicon-globe"></i> Visit Site</a></li>
-                    <li class="dropdown">
-                        <a href="#" data-toggle="dropdown"><i class="glyphicon glyphicon-star"></i> Dropdown <span
-                                class="caret"></span></a>
-                        <ul class="dropdown-menu" role="menu">
-                            <li><a href="#">Action</a></li>
-                            <li><a href="#">Another action</a></li>
-                            <li><a href="#">Something else here</a></li>
-                            <li class="divider"></li>
-                            <li><a href="#">Separated link</a></li>
-                            <li class="divider"></li>
-                            <li><a href="#">One more separated link</a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <form class="navbar-search pull-left">
-                            <input placeholder="Search" class="search-query form-control col-md-10" name="query"
-                                   type="text">
-                        </form>
-                    </li>
-                </ul>
-
-            </div>
-        </div>
-
-
-        <!-- external javascript -->
-
-        <script src="${pageContext.request.contextPath}/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-
-        <!-- library for cookie management -->
-        <script src="${pageContext.request.contextPath}/js/jquery.cookie.js"></script>
-        <!-- calender plugin -->
-        <script src='${pageContext.request.contextPath}/bower_components/moment/min/moment.min.js'></script>
-        <script src='${pageContext.request.contextPath}/bower_components/fullcalendar/dist/fullcalendar.min.js'></script>
-        <!-- data table plugin -->
-        <script src='${pageContext.request.contextPath}/js/jquery.dataTables.min.js'></script>
-
-        <!-- select or dropdown enhancer -->
-        <script src="${pageContext.request.contextPath}/bower_components/chosen/chosen.jquery.min.js"></script>
-        <!-- plugin for gallery image view -->
-        <script src="${pageContext.request.contextPath}/bower_components/colorbox/jquery.colorbox-min.js"></script>
-        <!-- notification plugin -->
-        <script src="${pageContext.request.contextPath}/js/jquery.noty.js"></script>
-        <!-- library for making tables responsive -->
-        <script src="${pageContext.request.contextPath}/bower_components/responsive-tables/responsive-tables.js"></script>
-        <!-- tour plugin -->
-        <script src="${pageContext.request.contextPath}/bower_components/bootstrap-tour/build/js/bootstrap-tour.min.js"></script>
-        <!-- star rating plugin -->
-        <script src="${pageContext.request.contextPath}/js/jquery.raty.min.js"></script>
-        <!-- for iOS style toggle switch -->
-        <script src="${pageContext.request.contextPath}/js/jquery.iphone.toggle.js"></script>
-        <!-- autogrowing textarea plugin -->
-        <script src="${pageContext.request.contextPath}/js/jquery.autogrow-textarea.js"></script>
-        <!-- multiple file upload plugin -->
-        <script src="${pageContext.request.contextPath}/js/jquery.uploadify-3.1.min.js"></script>
-        <!-- history.js for cross-browser state change on ajax -->
-        <script src="${pageContext.request.contextPath}/js/jquery.history.js"></script>
-        <!-- application script for Charisma demo -->
-        <script src="${pageContext.request.contextPath}/js/charisma.js"></script>
-
-
+        <tiles:insertAttribute name="footer" />
     </body>
 </html>

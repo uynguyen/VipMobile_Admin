@@ -15,6 +15,7 @@
             http://www.springframework.org/schema/mvc
             http://www.springframework.org/schema/mvc/spring-mvc.xsd"
 >   
+    <bean id="applicationContextProvder" class="uynguyen.common.ApplicationContextProvider"/>
     <!--<mvc:resources mapping="/resources/**" location="/resources/" cache-period="31556926"/>-->
   
     <tx:annotation-driven  />
