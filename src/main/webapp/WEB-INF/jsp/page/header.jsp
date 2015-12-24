@@ -1,82 +1,39 @@
 <%-- 
     Document   : header
-    Created on : May 13, 2015, 8:25:13 PM
-    Author     : UyNguyen.ITUS
+    Created on : Dec 24, 2015, 2:44:20 PM
+    Author     : LeeSan
 --%>
 
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
-<!DOCTYPE html>
+<div class="navbar navbar-default" role="navigation">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+        <a class="" href="index.html"><span class="navbar-brand"><span class="fa fa-paper-plane"></span> Aircraft</span></a></div>
 
-<div class="header">
-    <div class="container">
-        <div class="header-left">
-            <div class="top-menu">
-                <ul>
-                    <c:if test="${menu != null}">
-                        <c:choose>
-                            <c:when test="${menu == 'product'}">
-                                <li ><a href="IndexController.do">TRANG CHỦ</a></li>
-                                <li class='active'><a href="/Spring/uynguyen/Product.do?page=1">DANH SÁCH SẢN PHẨM</a></li>	
-                                <li><a href="AboutController.do">VỀ CHÚNG TÔI</a></li>
-                                </c:when>
-                                <c:when test="${menu == 'about'}">
-                                <li ><a href="IndexController.do">TRANG CHỦ</a></li>
-                                <li><a href="/Spring/uynguyen/Product.do?page=1">DANH SÁCH SẢN PHÂM</a></li>	
-                                <li class='active'><a href="AboutController.do">VỀ CHÚNG TÔI</a></li>	
-                                </c:when>
+    <div class="navbar-collapse collapse" style="height: 1px;">
+        <ul id="main-menu" class="nav navbar-nav navbar-right">
+            <li class="dropdown hidden-xs">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                    <span class="glyphicon glyphicon-user padding-right-small" style="position:relative;top: 3px;"></span> Jack Smith
+                    <i class="fa fa-caret-down"></i>
+                </a>
 
-                        </c:choose>
-                    </c:if>
-                    <c:if test="${menu == null}">
-                        <li  class='active'><a href="IndexController.do">TRANG CHỦ</a></li>
-                        <li><a href="/Spring/uynguyen/Product.do?page=1">DANH SÁCH SẢN PHÂM</a></li>	
-                        <li><a href="AboutController.do">VỀ CHÚNG TÔI</a></li>
-                        </c:if>
-
+                <ul class="dropdown-menu">
+                    <li><a href="./">My Account</a></li>
+                    <li class="divider"></li>
+                    <li class="dropdown-header">Admin Panel</li>
+                    <li><a href="./">Users</a></li>
+                    <li><a href="./">Security</a></li>
+                    <li><a tabindex="-1" href="./">Payments</a></li>
+                    <li class="divider"></li>
+                    <li><a tabindex="-1" href="sign-in.html">Logout</a></li>
                 </ul>
+            </li>
+        </ul>
 
-                <!-- script-for-menu -->
-                <script>
-                    $("span.menu").click(function () {
-                        $(".top-menu ul").slideToggle("slow", function () {
-                        });
-                    });
-                </script>
-                <!-- script-for-menu -->	 	 
-
-            </div>
-        </div>
-        <div class="logo">
-            <img src="${applicationScope.logoURL}" alt="Logo"/>
-        </div>
-        <div class="header-right">
-
-            <c:choose>
-                <c:when test="${sessionScope.customer == null}">
-                    <div class='signin'> 
-                        <ul> 
-                            <li><a href='/Spring/uynguyen/cart/viewCart.do'><img href='#' src='${applicationScope.cartURL}' alt=''/>GIỎ HÀNG</a> <span>/<span> &nbsp;</li> 
-                                        <li><a href='/Spring/uynguyen/users/register.do'>ĐĂNG KÝ</a> <span>/<span> &nbsp;</li> 
-                                                    <li><a href='/Spring/uynguyen/users/login.do'> ĐĂNG NHẬP</a></li> 
-                                                    </div> 
-                                                    </ul>
-                                                </c:when>
-                                                <c:otherwise>
-                                                    <div class='signin'> 
-                                                        <div class='cart-sec'> 
-                                                            <a href='/Spring/uynguyen/cart/viewCart.do'><img href='cart.html' src='images/cart.png' alt=''/>GIỎ HÀNG </a></div> 
-                                                        <ul> 
-                                                            <li><a  href="/Spring/uynguyen/users/logout.do"><input type='button' value='ĐĂNG XUẤT' class ='logOut'/></a></li> 
-                                                            <li><a href='/Spring/uynguyen/users/accinfor.do'>TÀI KHOẢN</a> </li> 
-                                                            <!--<li><a href='HistoryController.do'>LỊCH SỬ MUA HÀNG</a> </li>--> 
-                                                            <li><a href='/Spring/uynguyen/bills/getAll.do'>HÓA ĐƠN MUA HÀNG</a> </li> 
-
-                                                        </ul>
-                                                    </div> 
-                                                </c:otherwise>
-                                            </c:choose>
-                                            </div> 
-                                            </div> 
-                                            </div> 
-
+    </div>
+</div>

@@ -15,8 +15,9 @@ import org.springframework.web.bind.annotation.RequestMethod;
  * @author LeeSan
  */
 @Controller
+@RequestMapping("/dashboard")
 public class HomeController {
-    @RequestMapping(value = {"/home.do" , "/"}, method = RequestMethod.GET)
+    @RequestMapping(value = {"/home.do"}, method = RequestMethod.GET)
     public String list(Model model) {
 
         return "Home";
