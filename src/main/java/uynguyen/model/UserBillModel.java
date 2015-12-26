@@ -12,15 +12,17 @@ import java.util.Date;
  *
  * @author LeeSan
  */
-public class UserBillModel implements Serializable{
+public class UserBillModel implements Serializable {
+
     Integer id;
     String code;
-    Boolean State;
+
     Date bookDate;
     Double total;
     Double VAT;
     Double sale;
     AccountModel account = new AccountModel();
+    BillStateModel state = new BillStateModel();
 
     public Integer getId() {
         return id;
@@ -36,14 +38,6 @@ public class UserBillModel implements Serializable{
 
     public void setCode(String code) {
         this.code = code;
-    }
-
-    public Boolean getState() {
-        return State;
-    }
-
-    public void setState(Boolean State) {
-        this.State = State;
     }
 
     public Date getBookDate() {
@@ -86,7 +80,12 @@ public class UserBillModel implements Serializable{
         this.account = account;
     }
 
-    
-    
-            
+    public BillStateModel getState() {
+        return state;
+    }
+
+    public void setState(BillStateModel state) {
+        this.state = state;
+    }
+
 }

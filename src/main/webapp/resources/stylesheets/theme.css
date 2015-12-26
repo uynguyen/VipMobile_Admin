@@ -11,6 +11,15 @@
     More info at: http://lesselements.com
 -----------------------------------------------------*/
 /*Standard Elements*/
+.no-margin-top{
+    margin-top: 0px !important;
+}
+
+.btn_full_width{
+    width: 100% !important;
+}
+
+//
 body {
   background: #fafafa;
   background-position: initial initial;
