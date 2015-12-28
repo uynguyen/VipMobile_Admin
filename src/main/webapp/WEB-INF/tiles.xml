@@ -35,6 +35,14 @@ and open the template in the editor.
         <put-attribute name="content" value="/WEB-INF/jsp/page/billdetail.jsp"/>
     </definition>
     
+    <definition name="SaleProducts" extends="Page">
+        <put-attribute name="title" value="Page sale products" />
+        <put-attribute name="content" value="/WEB-INF/jsp/page/saleproduct.jsp"/>
+    </definition>
+    <definition name="AddSaleProduct" extends="Page">
+        <put-attribute name="title" value="Page sale products" />
+        <put-attribute name="content" value="/WEB-INF/jsp/page/addsaleproduct.jsp"/>
+    </definition>
     
 </tiles-definitions>
 

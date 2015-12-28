@@ -4,8 +4,8 @@
         <li><a href="#" data-target=".dashboard-menu" class="nav-header" data-toggle="collapse"><i class="fa fa-fw fa-dashboard"></i> Dashboard<i class="fa fa-collapse"></i></a></li>
         <li><ul class="dashboard-menu nav nav-list collapse in">
                 <li><a href="${pageContext.request.contextPath}/dashboard/home.do"><span class="fa fa-caret-right"></span> Trang chính</a></li>
-                <li ><a href="${pageContext.request.contextPath}/userbill/getAll.do"><span class="fa fa-caret-right"></span> Danh sách đơn hàng</a></li>
-                <li ><a href="user.html"><span class="fa fa-caret-right"></span> Sản phẩm khuyến mãi</a></li>
+                <li ><a href="${pageContext.request.contextPath}/userbill/getAll.do?page=1"><span class="fa fa-caret-right"></span> Danh sách đơn hàng</a></li>
+                <li ><a href="${pageContext.request.contextPath}/product/getSaleProducts.do"><span class="fa fa-caret-right"></span> Sản phẩm khuyến mãi</a></li>
                 <li ><a href="media.html"><span class="fa fa-caret-right"></span> Media</a></li>
                 <li ><a href="calendar.html"><span class="fa fa-caret-right"></span> Calendar</a></li>
             </ul></li>

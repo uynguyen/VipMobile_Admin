@@ -24,6 +24,25 @@
         </script>
 
 
+
+        <script type="text/javascript" src="${pageContext.request.contextPath}/resources/lib/bootstrap-datepicker.min.js"></script>
+        <script src="${pageContext.request.contextPath}/resources/lib/bootstrap-datepicker.vi.min.js" charset="UTF-8"></script>
+        <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/stylesheets/bootstrap-datepicker.css" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/stylesheets/theme.css">
         <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/stylesheets/premium.css">
 
@@ -81,6 +100,8 @@
         <link rel="apple-touch-icon-precomposed" href="../assets/ico/apple-touch-icon-57-precomposed.png">
 
 
+
+
         <tiles:insertAttribute name="header" />
 
         <tiles:insertAttribute name="leftbar" />
@@ -89,6 +110,8 @@
         <div class="content">
 
             <div class="main-content">
+            
+
 
 
                 <tiles:insertAttribute name="content" />
@@ -103,13 +126,15 @@
 
         <script src="${pageContext.request.contextPath}/resources/lib/bootstrap/js/bootstrap.js"></script>
         <script type="text/javascript">
-            $("[rel=tooltip]").tooltip();
-            $(function () {
-                $('.demo-cancel-click').click(function () {
-                    return false;
-                });
-            });
+                    $("[rel=tooltip]").tooltip();
+                    $(function () {
+                        $('.demo-cancel-click').click(function () {
+                            return false;
+                        });
+                    });
         </script>
+
+
 
     </body>
 
