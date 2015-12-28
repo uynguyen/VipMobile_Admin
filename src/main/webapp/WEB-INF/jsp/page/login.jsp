@@ -3,6 +3,7 @@
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<div>${mess}</div>
 <div class="dialog">
     <div class="panel panel-default">
         <p class="panel-heading no-collapse">Sign In</p>
@@ -18,6 +19,7 @@
                 </div>
                 <button type="submit" class="btn btn-primary pull-right" value="">Đăng nhập</button>
                 <label class="remember-me"><input type="checkbox"> Remember me</label>
+                
                 <div class="clearfix"></div>
             </form:form>
         </div>

@@ -14,12 +14,18 @@ and open the template in the editor.
         <put-attribute name="header" value="/WEB-INF/jsp/page/header.jsp" />
         <put-attribute name="footer" value="/WEB-INF/jsp/page/footer.jsp" />
     </definition>
+    
+     <definition name="PageLogin" template="/WEB-INF/jsp/template/LoginTemplate.jsp">
+        <put-attribute name="title" value="Page" />
+       
+    </definition>
+    
     <definition name="Home" extends="Page">
         <put-attribute name="title" value="Page Home" />
         <put-attribute name="content" value="/WEB-INF/jsp/page/home.jsp"/>
     </definition>
     
-    <definition name="Login" extends="Page">
+    <definition name="Login" extends="PageLogin">
         <put-attribute name="title" value="Page Login" />
         <put-attribute name="content" value="/WEB-INF/jsp/page/login.jsp"/>
     </definition>
