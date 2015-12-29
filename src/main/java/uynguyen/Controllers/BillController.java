@@ -41,7 +41,7 @@ import uynguyen.model.UserBillModel;
  * @author LeeSan
  */
 @Controller
-@RequestMapping("/userbill")
+@RequestMapping("/dashboard/userbill")
 public class BillController extends RootController {
 
     public BillController() {

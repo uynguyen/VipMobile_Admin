@@ -42,7 +42,7 @@
             id_state: id,
         });
         $.ajax({
-            url: domain + "/userbill/updateBills.do",
+            url: domain + "/dashboard/userbill/updateBills.do",
             type: "POST",
             contentType: "application/json; charset=utf-8",
             dataType: "json",
@@ -193,12 +193,12 @@
         <li>
             <c:choose>
                 <c:when test='${param.page == 1}'>
-                    <a href='${pageContext.request.contextPath}/userbill/${endPoint}?page=1${ext}' aria-label='Previous'>   
+                    <a href='${pageContext.request.contextPath}/dashboard/userbill/${endPoint}?page=1${ext}' aria-label='Previous'>   
                         <span aria-hidden='true'>&laquo;</span>   
                     </a>  
                 </c:when>    
                 <c:otherwise>
-                    <a href="${pageContext.request.contextPath}/userbill/${endPoint}?page=${param.page - 1}${ext}" aria-label="Previous">   
+                    <a href="${pageContext.request.contextPath}/dashboard/userbill/${endPoint}?page=${param.page - 1}${ext}" aria-label="Previous">   
                         <span aria-hidden='true'>&laquo;</span>   
                     </a>  
                 </c:otherwise>
@@ -210,10 +210,10 @@
 
                 <c:choose>
                     <c:when test='${index == param.page}'>
-                        <li class="active"><a href='${pageContext.request.contextPath}/userbill/${endPoint}?page=${index}${ext}'> ${index} </a></li>   
+                        <li class="active"><a href='${pageContext.request.contextPath}/dashboard/userbill/${endPoint}?page=${index}${ext}'> ${index} </a></li>   
                         </c:when>    
                         <c:otherwise>
-                        <li><a href='${pageContext.request.contextPath}/userbill/${endPoint}?page=${index}${ext}'> ${index} </a></li>   
+                        <li><a href='${pageContext.request.contextPath}/dashboard/userbill/${endPoint}?page=${index}${ext}'> ${index} </a></li>   
                         </c:otherwise>
 
                 </c:choose>
@@ -223,12 +223,12 @@
         <li>
             <c:choose>
                 <c:when test='${param.page >= bills.total}'>
-                    <a href='${pageContext.request.contextPath}/userbill/${endPoint}?page=${bills.total}${ext}' aria-label='Next'>   
+                    <a href='${pageContext.request.contextPath}/dashboard/userbill/${endPoint}?page=${bills.total}${ext}' aria-label='Next'>   
                         <span aria-hidden='true'>&raquo;</span>   
                     </a>  
                 </c:when>    
                 <c:otherwise>
-                    <a href="${pageContext.request.contextPath}/userbill/${endPoint}?page=${param.page + 1}${ext}" aria-label="Next">   
+                    <a href="${pageContext.request.contextPath}/dashboard/userbill/${endPoint}?page=${param.page + 1}${ext}" aria-label="Next">   
                         <span aria-hidden='true'>&raquo;</span>   
                     </a>  
                 </c:otherwise>

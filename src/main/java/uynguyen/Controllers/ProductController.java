@@ -23,7 +23,7 @@ import uynguyen.model.SaleProduct;
  * @author LeeSan
  */
 @Controller
-@RequestMapping("/product")
+@RequestMapping("/dashboard/product")
 public class ProductController extends RootController {
 
     @RequestMapping(value = {"/getSaleProducts.do"}, method = RequestMethod.GET)

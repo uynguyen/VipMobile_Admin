@@ -18,7 +18,8 @@
         <ul id="main-menu" class="nav navbar-nav navbar-right">
             <li class="dropdown hidden-xs">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                    <span class="glyphicon glyphicon-user padding-right-small" style="position:relative;top: 3px;"></span> Jack Smith
+                    <span class="glyphicon glyphicon-user padding-right-small" style="position:relative;top: 3px;"></span>
+                    ${sessionScope.User.acc.fullName}
                     <i class="fa fa-caret-down"></i>
                 </a>
 
@@ -30,7 +31,7 @@
                     <li><a href="./">Security</a></li>
                     <li><a tabindex="-1" href="./">Payments</a></li>
                     <li class="divider"></li>
-                    <li><a tabindex="-1" href="sign-in.html">Logout</a></li>
+                    <li><a tabindex="-1" href="${pageContext.request.contextPath}/user/logout.do">Logout</a></li>
                 </ul>
             </li>
         </ul>
