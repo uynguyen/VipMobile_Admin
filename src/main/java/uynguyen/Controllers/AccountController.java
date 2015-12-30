@@ -8,6 +8,7 @@ package uynguyen.Controllers;
 import java.util.HashMap;
 import java.util.Map;
 import javax.json.Json;
+import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 import org.json.JSONObject;
 import org.springframework.http.HttpEntity;
@@ -51,7 +52,7 @@ public class AccountController extends RootController {
     }
 
     @RequestMapping(value = {"/postLogin.do"}, method = RequestMethod.POST)
-    public ModelAndView doLogin(LoginForm data, Model model, HttpSession session) {
+    public ModelAndView doLogin(LoginForm data, Model model, HttpSession session, HttpServletRequest request) {
         try {
 
             final String url = baseURL + "/user/login?Role=admin";
@@ -61,7 +62,7 @@ public class AccountController extends RootController {
             outputJsonObj.put("password", data.getPassword());
             String user = outputJsonObj.toString();
 
-            String response = postRestAPI(url, user);
+            String response = postRestAPI(url, user, request);
 
             AccessTokenModel accessToken = (AccessTokenModel) JsonToModel(response, new AccessTokenModel());
 

@@ -52,7 +52,8 @@
     <!--INTERCEPTOR-->
     <mvc:interceptors>
         <mvc:interceptor>
-            <mvc:mapping path="/dashboard/*" />
+            <mvc:mapping path="/dashboard/**" />
+            
             <bean class="uynguyen.interceptor.AuthenticationInterceptor"/>
         </mvc:interceptor>
     </mvc:interceptors>

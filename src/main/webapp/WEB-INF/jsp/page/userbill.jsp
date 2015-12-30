@@ -29,6 +29,7 @@
     function postUpdateState(id) {
 
         var domain = $('#domain').text();
+       // var token = $('#token').text();
         var checkBox = document.querySelectorAll("input[type=checkbox]:not([id='checkAll'])");
         var id_bills = [];
         for (var i = 0; i < checkBox.length; i++) {
@@ -48,9 +49,8 @@
             dataType: "json",
             data: test,
             success: function () {
-                //   alert('success');
+               // alert('success');
                 var item = $('#bill_state_' + id).attr('value');
-
                 for (var i = 0; i < id_bills.length; i++) {
                     $('#bill_' + id_bills[i]).text(item);
                 }
@@ -58,9 +58,8 @@
                 // $('#result').append('Server Response: ' + json.server_response);
             },
             error: function (err) {
-
-
-                console.log(err);
+               // alert('err');
+                console.log(err.data);
             }
         });
     }
@@ -95,8 +94,7 @@
                                 $('#sandbox-container .input-group.date').datepicker({
                                     todayHighlight: true,
                                     format: "dd-mm-yyyy"
-                                });
-                            </script>
+                                });</script>
                         </div>
                         <div class="col-md-2">
                             <div>

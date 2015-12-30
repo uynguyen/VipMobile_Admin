@@ -20,7 +20,6 @@ import uynguyen.model.AccessTokenModel;
  */
 public class AuthenticationInterceptor extends HandlerInterceptorAdapter {
 
-    
     //TODO : Check exprise date
     @Override
     public boolean preHandle(HttpServletRequest request,
@@ -28,16 +27,16 @@ public class AuthenticationInterceptor extends HandlerInterceptorAdapter {
             throws Exception {
 
         System.out.println("preHandle");
-        
-        
+
         AccessTokenModel object = (AccessTokenModel) request.getSession().getAttribute("User");
         if (object == null) {
-
+            System.out.println("REQUIRE");
             response.sendRedirect(request.getContextPath() + "/user/requireToken.do");
             return false;
 
         }
-
+        System.out.println("TOKEN" + object.getToken());
+        request.setAttribute("token", object.getToken());
         return true;
     }
 

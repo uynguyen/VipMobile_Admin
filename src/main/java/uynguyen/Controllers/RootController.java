@@ -14,12 +14,15 @@ import java.util.List;
 import java.util.Properties;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.servlet.http.HttpServletRequest;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.core.io.Resource;
 import org.springframework.core.io.support.PropertiesLoaderUtils;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
+import org.springframework.http.HttpMethod;
 import org.springframework.http.MediaType;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.client.RestTemplate;
 
 /**
@@ -62,7 +65,6 @@ public abstract class RootController {
     }
 
     //Convert json string to jsonobject
-
     protected Object JsonToModel(String jsonInString, Object clazz) {
         try {
             ObjectMapper mapper = new ObjectMapper();
@@ -75,22 +77,31 @@ public abstract class RootController {
 
     }
 
-    protected String postRestAPI(String url, String postedObject) {
+    protected String postRestAPI(String url, String postedObject, HttpServletRequest request) {
+        String token = (String) request.getAttribute("token");
         HttpHeaders headers = new HttpHeaders();
         headers.setContentType(MediaType.APPLICATION_JSON);
 
+        headers.set("Authorization", "Bearer " + token);
         RestTemplate restTemplate = new RestTemplate();
         HttpEntity<String> entity = new HttpEntity<String>(postedObject, headers);
 
         String response = restTemplate.postForObject(url, entity, String.class);
+        System.out.print(token);
         return response;
     }
 
-    protected String getRestAPI(String url) {
+    protected String getRestAPI(String url, HttpServletRequest request) {
+        String token = (String) request.getAttribute("token");
+        System.out.print(token);
         RestTemplate restTemplate = new RestTemplate();
-
-        String response = restTemplate.getForObject(url, String.class);
-        return response;
+        HttpHeaders headers = new HttpHeaders();
+        headers.set("Authorization", "Bearer " + token);
+        HttpEntity<String> entity = new HttpEntity<String>(headers);
+        ResponseEntity<String> res = restTemplate.exchange(url, HttpMethod.GET, entity, String.class);
         
+        return res.getBody();
+        
+
     }
 }
