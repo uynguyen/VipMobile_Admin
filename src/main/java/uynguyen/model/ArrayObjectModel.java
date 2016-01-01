@@ -14,7 +14,8 @@ import java.util.List;
  * @author LeeSan
  */
 public class ArrayObjectModel<T extends Object> implements Serializable{
-    int total;
+    //Total page
+    int total; 
     List<T> result = new ArrayList<>();
 
     public int getTotal() {

@@ -5,23 +5,13 @@
  */
 package uynguyen.Controllers;
 
-import java.util.HashMap;
-import java.util.Map;
-import javax.json.Json;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 import org.json.JSONObject;
-import org.springframework.http.HttpEntity;
-import org.springframework.http.HttpHeaders;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.MediaType;
-import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.client.RestTemplate;
 import org.springframework.web.servlet.ModelAndView;
 import uynguyen.form.LoginForm;
 import uynguyen.model.AccessTokenModel;
@@ -31,7 +21,7 @@ import uynguyen.model.AccessTokenModel;
  * @author LeeSan
  */
 @Controller
-@RequestMapping("/user")
+@RequestMapping(value = {"/user", "/"})
 public class AccountController extends RootController {
 
     public AccountController() {
@@ -41,6 +31,7 @@ public class AccountController extends RootController {
     @RequestMapping(value = {"/login.do", "/"}, method = RequestMethod.GET)
     public String login(Model model) {
         model.addAttribute("loginForm", new LoginForm());
+        model.addAttribute("mess", "");
         return "Login";
     }
 
@@ -74,7 +65,6 @@ public class AccountController extends RootController {
 
                 ModelAndView modelAndView = new ModelAndView("redirect:/user/login.do");
                 modelAndView.addObject("mess", accessToken.getMess());
-
                 return modelAndView;
             }
         } catch (Exception e) {
