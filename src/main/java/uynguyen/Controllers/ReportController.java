@@ -26,19 +26,19 @@ public class ReportController extends RootController {
         super();
     }
 
-    @RequestMapping(value = {"/customer.do/{top}"}, method = RequestMethod.GET)
-    public String getCustomerReport(@PathVariable("top") int top, Model model, HttpServletRequest request,
+    @RequestMapping(value = {"/customer.do"}, method = RequestMethod.GET)
+    public String getCustomerReport(Model model, HttpServletRequest request,
             HttpServletResponse response) {
-        String url = baseURL + "/report/customer/generate/" + top;
-        String responseString = "";
-        responseString = getRestAPI(url, request);
-        if ("success".equals(responseString)) {
-            url = baseURL + "/report/customer/all";
-            responseString = getRestAPI(url, request);
+        String url = baseURL + "/report/customer/all";
+        String responseString = getRestAPI(url, request);
+        try {
+
             JSONObject data = new JSONObject(responseString);
             model.addAttribute("linkPdf", data.getString("linkPdf"));
             model.addAttribute("linkHtml", data.getString("linkHtml"));
             model.addAttribute("linkXls", data.getString("linkXls"));
+        } catch (Exception ex) {
+
         }
 
         return "report.customer";
@@ -46,17 +46,17 @@ public class ReportController extends RootController {
 
     @RequestMapping(value = {"/income.do/{typeReport}"}, method = RequestMethod.GET)
     public String getIncomeReport(@PathVariable("typeReport") String type, Model model, HttpServletRequest request) {
-        String url = baseURL + "/report/income/generate/" + type;
-        String response = "success";
-        //  response = getRestAPI(url, request);
-        if ("success".equals(response)) {
-            url = baseURL + "/report/income/" + type;
-            response = getRestAPI(url, request);
+        String url = baseURL + "/report/income/" + type;
+        String response = getRestAPI(url, request);
+        try {
             JSONObject data = new JSONObject(response);
             model.addAttribute("linkPdf", data.getString("linkPdf"));
             model.addAttribute("linkHtml", data.getString("linkHtml"));
             model.addAttribute("linkXls", data.getString("linkXls"));
+        } catch (Exception ex) {
+
         }
+
         String[] pagetype = {"", "", "", ""};
         switch (type) {
             case "week":

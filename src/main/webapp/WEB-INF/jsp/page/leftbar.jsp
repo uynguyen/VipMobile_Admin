@@ -14,7 +14,7 @@
         <li><ul class="premium-menu nav nav-list collapse">
                 
                 <li ><a href="${pageContext.request.contextPath}/dashboard/report/income.do/week"><span class="fa fa-caret-right"></span> Doanh thu</a></li>
-                <li ><a href="${pageContext.request.contextPath}/dashboard/report/customer.do/20"><span class="fa fa-caret-right"></span> Top khách hàng </a></li>
+                <li ><a href="${pageContext.request.contextPath}/dashboard/report/customer.do"><span class="fa fa-caret-right"></span> Top khách hàng </a></li>
 <!--                <li ><a href="premium-blog-item.html"><span class="fa fa-caret-right"></span> Blog Page</a></li>
                 <li ><a href="premium-pricing-tables.html"><span class="fa fa-caret-right"></span> Pricing Tables</a></li>
                 <li ><a href="premium-upgrade-account.html"><span class="fa fa-caret-right"></span> Upgrade Account</a></li>
