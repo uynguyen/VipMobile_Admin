@@ -35,7 +35,14 @@ and open the template in the editor.
         <put-attribute name="title" value="Page User's bills" />
         <put-attribute name="content" value="/WEB-INF/jsp/page/userbill.jsp"/>
     </definition>
-    
+     <definition name="report.customer" extends="Page">
+        <put-attribute name="title" value="Báo cáo top khách hàng" />
+        <put-attribute name="content" value="/WEB-INF/jsp/page/report.customer.jsp"/>
+    </definition>
+     <definition name="report.income" extends="Page">
+        <put-attribute name="title" value="Báo cáo doanh thu" />
+        <put-attribute name="content" value="/WEB-INF/jsp/page/report.income.jsp"/>
+    </definition>
     <definition name="BillDetail" extends="Page">
         <put-attribute name="title" value="Page bill detail" />
         <put-attribute name="content" value="/WEB-INF/jsp/page/billdetail.jsp"/>
