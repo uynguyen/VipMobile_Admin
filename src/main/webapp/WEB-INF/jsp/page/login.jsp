@@ -3,7 +3,6 @@
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<div>${mess}</div>
 <div class="dialog">
     <div class="panel panel-default">
         <p class="panel-heading no-collapse">Sign In</p>
@@ -11,11 +10,14 @@
             <form:form method='POST' action="${pageContext.request.contextPath}/user/postLogin.do" modelAttribute="loginForm">
                 <div class="form-group">
                     <label>Username</label>
-                    <form:input type="text" class="form-control span12" value="${param.username}" path="username"/>
+                    <form:input type="text" class="form-control span12" value="${params.username}" path="username"/>
                 </div>
                 <div class="form-group">
                     <label>Password</label>
                     <form:input type="password" class="form-control span12 form-control" path="password" />
+                </div>
+                 <div class="form-group">
+                    <label class="text-danger">${mess}</label>
                 </div>
                 <button type="submit" class="btn btn-primary pull-right" value="">Đăng nhập</button>
                 <label class="remember-me"><input type="checkbox"> Remember me</label>

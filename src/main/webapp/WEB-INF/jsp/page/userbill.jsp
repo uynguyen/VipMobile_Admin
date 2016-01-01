@@ -69,12 +69,12 @@
 
 
 <br />
-<div class="container">
+<div class="container-fluid">
     <div class="row">
-        <div class="col-md-offset-2 col-md-10">
+        <div class="col-md-offset-1 col-md-10">
             <form:form method='GET' action="${pageContext.request.contextPath}/userbill/searchBills.do" >
                 <input type="text" class="hidden" name="page" value="1"/>
-                <div class="container">
+                <div class="container-fluid">
                     <div class="row">
                         <div class="col-md-5">
 
@@ -154,12 +154,10 @@
 
     </tbody>
 </table>
-<div class="container">
+<div class="container-fluid">
     <div class="row">
-        <div class="col-md-10">
-
-        </div>
-        <div class="col-md-2">
+        
+        <div class="col-md-offset-8 col-md-2">
             <div class="dropdown">
                 <button class="btn btn-danger dropdown-toggle btn_full_width" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
                     Cập nhật

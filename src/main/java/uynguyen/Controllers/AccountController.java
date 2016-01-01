@@ -31,6 +31,7 @@ public class AccountController extends RootController {
     @RequestMapping(value = {"/login.do", "/"}, method = RequestMethod.GET)
     public String login(Model model) {
         model.addAttribute("loginForm", new LoginForm());
+        model.addAttribute("mess", "");
         return "Login";
     }
 
@@ -64,7 +65,6 @@ public class AccountController extends RootController {
 
                 ModelAndView modelAndView = new ModelAndView("redirect:/user/login.do");
                 modelAndView.addObject("mess", accessToken.getMess());
-
                 return modelAndView;
             }
         } catch (Exception e) {
