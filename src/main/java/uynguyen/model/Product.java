@@ -44,6 +44,8 @@ public class Product implements Serializable {
 
     private Date importDate;
 
+    private String description;
+
     public Integer getId() {
         return id;
     }
@@ -99,5 +101,14 @@ public class Product implements Serializable {
     public void setImportDate(Date importDate) {
         this.importDate = importDate;
     }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+    
 
 }

@@ -34,12 +34,19 @@
 
 
 <table class="table">
+    <br/>
+
+    <br/>
+    <label class="btn btn-info btn_with_full_width">CHI TIẾT HÓA ĐƠN</label>
+    <br/>
+    <br/>
     <thead>
         <tr>
             <th>#</th>
             <th>Mã sản phẩm</th>
+            <th>Tên sản phẩm</th>
             <th>Số lượng</th>
-            <th>Hình ảnh</th>
+            <th>Đơn giá</th>
             <th>Thành tiền</th>
             <!--<th style="width: 3.5em;"></th>-->
         </tr>
@@ -48,9 +55,13 @@
         <c:forEach var="bill" items="${BillDetail}" varStatus="loop">
             <tr>
                 <td>${loop.index + 1}</td>
-                <td></td>
+
+                <td>${bill.code}</td>
+                <td>${bill.name}</td>
                 <td>${bill.amount}</td>
-                <td></td>
+                <td>${bill.price}</td>
+                <td><fmt:formatNumber type="number" value="${bill.price}" groupingUsed="true"/></td>
+
                 <td><fmt:formatNumber type="number" value="${bill.total_price}" groupingUsed="true"/></td>
 
                 <!--                <td>

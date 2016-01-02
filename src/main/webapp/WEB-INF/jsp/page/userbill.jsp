@@ -139,7 +139,7 @@
                 <td id="bill_${bill.id}">${bill.state.value}</td>
                 <td>${bill.account.fullName}</td>
                 <td>
-                    <a href="${pageContext.request.contextPath}/userbill/getDetail.do/${bill.id}"><i class="fa fa-pencil"></i></a>
+                    <a href="${pageContext.request.contextPath}/dashboard/userbill/getDetail.do/${bill.id}"><i class="fa fa-pencil"></i></a>
                     <a href="#myModal" role="button" data-toggle="modal"><i class="fa fa-trash-o"></i></a>
                 </td>
                 <td>

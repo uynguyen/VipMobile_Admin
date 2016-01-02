@@ -47,7 +47,7 @@ public class AccountController extends RootController {
         try {
 
             final String url = baseURL + "/user/login?Role=admin";
-
+            System.out.println(url);
             JSONObject outputJsonObj = new JSONObject();
             outputJsonObj.put("username", data.getUsername());
             outputJsonObj.put("password", data.getPassword());

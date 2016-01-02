@@ -29,7 +29,7 @@ public class ProductController extends RootController {
     @RequestMapping(value = {"/getSaleProducts.do"}, method = RequestMethod.GET)
     public String list(Model model) {
 
-        final String url = baseURL + "/product/getSaleProduct/0/5";
+        final String url = baseURL + "/product/getSaleProduct/1/100";
 
         RestTemplate restTemplate = new RestTemplate();
 
@@ -37,6 +37,7 @@ public class ProductController extends RootController {
 
         model.addAttribute("serverDomain", baseURL);
         model.addAttribute("saleProducts", JsonToArrayModel(response, new SaleProduct()));
+        
         return "SaleProducts";
     }
 
